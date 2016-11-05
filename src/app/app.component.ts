@@ -25,20 +25,24 @@ import { AppState } from './app.service';
       |
       <span>
         <a [routerLink]=" ['./home'] ">
-          Home
+          Senior Centers
         </a>
       </span>
       |
       <span>
         <a [routerLink]=" ['./detail'] ">
-          Detail
+          Voting Locations
         </a>
       </span>
       |
       <span>
-        <a [routerLink]=" ['./about'] ">
-          About
+        <a [routerLink]=" ['./'] ">
+          Transit Locations
+        </a><span>
+        <a [routerLink]=" ['./'] ">
+          Police Stations
         </a>
+        
       </span>
     </nav>
 
