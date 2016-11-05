@@ -17,7 +17,9 @@ export class VotingLocationService {
                 voting = json.features;
                 let voterLocations = voting.map((feature: any) => {
                     let v = new voterLocation();
-                    // v.lat = feature.
+                    v.lat = feature.geometry.coordinate[0];
+					v.long = feature.geometry.coordinate[1];
+					v.name = features.properties.LOCATION
                 })
                 return voting;
             });
