@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
 @Injectable()
-export class SeniorLocationService {
+export class police-stations {
 
     constructor(public http: Http) {
 

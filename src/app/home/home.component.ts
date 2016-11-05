@@ -4,7 +4,7 @@ import { AppState } from '../app.service';
 import { Title } from './title';
 // import { XLarge } from './x-large';
 import { VotingLocationService } from './voting-locations.service';
-
+import{SeniorLocationService} from './senior-locations.service';
 @Component({
   // The selector is what angular internally uses
   // for `document.querySelectorAll(selector)` in our index.html
@@ -23,7 +23,10 @@ export class HomeComponent {
   // Set our default values
   localState = { value: '' };
   // TypeScript public modifiers
-  constructor(public appState: AppState, public title: Title, private votingLocationService: VotingLocationService) {
+  constructor(public appState: AppState, public title: Title,
+              private votingLocationService: VotingLocationService,
+              private seniorLocationService:SeniorLocationService){
+
 
   }
 
@@ -31,7 +34,7 @@ export class HomeComponent {
   ngOnInit() {
     console.log('hello `Home` component');
     // this.title.getData().subscribe(data => this.data = data);
-    this.votingLocationService.getData().subscribe(data => this.loadedData = data);
+    this.seniorLocationService.getData().subscribe(data => this.loadedData = data);
   }
 
   submitState(value: string) {
