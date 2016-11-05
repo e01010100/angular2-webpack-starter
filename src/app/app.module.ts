@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
-import { VotingLocationService } from './home/voting-locations.service.ts';
+import { VotingLocationService } from './home/voting-locations.service';
+import { SeniorLocationService } from './home/senior-locations.service';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -52,7 +53,8 @@ type StoreType = {
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
     APP_PROVIDERS,
-    VotingLocationService
+    VotingLocationService,
+    SeniorLocationService
   ]
 })
 export class AppModule {

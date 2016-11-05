@@ -9,11 +9,27 @@ export class VotingLocationService {
     }
 
     public getData() {
-        return this.http.get(''
+        return this.http.get('assets/voting-places.json')
             // 'https://data.howardcountymd.gov/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=general:Voting_Locations&outputFormat=application/json')
             .map((res: any) => {
-                return res.json();
+                let json =  res.json();
+                let voting = [];
+                voting = json.features;
+                let voterLocations = voting.map((feature: any) => {
+                    let v = new voterLocation();
+                    v.lat = feature.geometry.coordinate[0];
+					v.long = feature.geometry.coordinate[1];
+					v.name = features.properties.LOCATION
+                })
+                return voting;
             });
     }
 
+}
+
+export class voterLocation {
+    name;
+    lat;
+    long;
+    constructor() {};
 }
