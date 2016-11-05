@@ -16,7 +16,7 @@ export class SeniorLocationService {
                 let response = json.features;
                 let locations = response.map((feature: any) => {
                     let v = new seniorLocation();
-                    v.lat = feature.geometry.coordinates[0];
+                    v.long = feature.geometry.coordinates[0];
                     v.lat = feature.geometry.coordinates[1];
                     v.name = feature.properties.NAME;
                     return v;

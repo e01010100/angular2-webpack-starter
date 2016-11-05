@@ -33,8 +33,8 @@ export class HomeComponent {
   }
 
   titleName: string = 'My first angular2-google-maps project';
-  lat: number = 51.678418;
-  lng: number = 7.809007;
+  lng: number = -76.73637679719799;
+  lat: number = 39.20133653119792;
 
 
   public loadedData: any;
