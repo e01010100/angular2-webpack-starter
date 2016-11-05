@@ -20,15 +20,22 @@ import{SeniorLocationService} from './senior-locations.service';
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
+
+
+
+
   // Set our default values
   localState = { value: '' };
   // TypeScript public modifiers
   constructor(public appState: AppState, public title: Title,
               private votingLocationService: VotingLocationService,
               private seniorLocationService:SeniorLocationService){
-
-
   }
+
+  titleName: string = 'My first angular2-google-maps project';
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+
 
   public loadedData: any;
   ngOnInit() {

@@ -17,8 +17,12 @@
   <div>
     <h4>Local State</h4>
     <div>
-    loaded: {{loadedData | json}}
+    loaded: turned off <!-- {{loadedData | json}} -->
     </div>
+    {{titleName}}
+    <sebm-google-map [latitude]="lat" [longitude]="lng">
+      <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+    </sebm-google-map>
 <!--
     <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
 

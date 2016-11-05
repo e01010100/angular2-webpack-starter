@@ -20,6 +20,8 @@ import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLarge } from './home/x-large';
 
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -43,12 +45,16 @@ type StoreType = {
     HomeComponent,
     NoContentComponent,
     XLarge
+
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true })
+    RouterModule.forRoot(ROUTES, { useHash: true }),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAmTdh-nyU9MFSEUDlcOEyP1k0k5AgfqFU'
+    })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
