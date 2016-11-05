@@ -38,12 +38,16 @@ import { AppState } from './app.service';
       <span>
         <a [routerLink]=" ['./'] ">
           Transit Locations
-        </a><span>
+        </a>
+
+      </span>
+      <span>
         <a [routerLink]=" ['./'] ">
           Police Stations
         </a>
-        
+
       </span>
+      
     </nav>
 
     <main>
