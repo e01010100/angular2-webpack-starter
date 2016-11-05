@@ -16,7 +16,10 @@
 
   <div>
     <h4>Local State</h4>
-
+    <div>
+    loaded: {{loadedData | json}}
+    </div>
+<!--
     <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
 
       <input
@@ -27,6 +30,7 @@
 
       <button md-raised-button color="primary">Submit Value</button>
     </form>
+    -->
     <!--
         <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
         Rather than wiring up two-way data-binding ourselves with [value] and (input)
@@ -34,7 +38,7 @@
         <input type="text" name="textInput" [(ngModel)]="localState.value" autofocus>
       -->
 
-    <pre>this.localState = {{ localState | json }}</pre>
+
 
   </div>
 
